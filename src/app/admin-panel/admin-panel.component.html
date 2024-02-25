@@ -1,0 +1,73 @@
+<div class="flex gap-2">
+  <nav class="flex flex-col text-cream pl-3 pt-6 w-1/5 gap-6">
+    <a
+      routerLink="dashboard"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="flex rounded-md py-2 pl-2 gap-2 text-base cursor-pointer hover:bg-gray-300 hover:text-light-purple"
+    >
+      <lucide-icon class="w-5 h-5" name="home"></lucide-icon>
+      <p>Dashboard</p>
+    </a>
+
+    <a
+      routerLink="products"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="flex rounded-md py-2 pl-2 gap-2 text-base cursor-pointer hover:bg-gray-300 hover:text-light-purple"
+    >
+      <lucide-icon class="w-5 h-5" name="shopping-cart"></lucide-icon>
+      <p>Products</p>
+    </a>
+
+    <a
+      routerLink="categories"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="flex rounded-md py-2 pl-2 gap-2 text-base cursor-pointer hover:bg-gray-300 hover:text-light-purple"
+    >
+      <lucide-icon class="w-5 h-5" name="list"></lucide-icon>
+      <p>Categories</p>
+    </a>
+
+    <a
+      routerLink="orders"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="flex rounded-md py-2 pl-2 gap-2 text-base cursor-pointer hover:bg-gray-300 hover:text-light-purple"
+    >
+      <lucide-icon class="w-5 h-5" name="layers"></lucide-icon>
+      <p>Orders</p>
+    </a>
+
+    <a
+      routerLink="admins"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="flex rounded-md py-2 pl-2 gap-2 text-base cursor-pointer hover:bg-gray-300 hover:text-light-purple"
+    >
+      <lucide-icon class="w-5 h-5" name="users"></lucide-icon>
+      <p>Admins</p>
+    </a>
+
+    <a
+      routerLink="settings"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="flex rounded-md py-2 pl-2 gap-2 text-base cursor-pointer hover:bg-gray-300 hover:text-light-purple"
+    >
+      <lucide-icon class="w-5 h-5" name="settings"></lucide-icon>
+      <p>Settings</p>
+    </a>
+
+    <div
+      class="flex rounded-md py-2 pl-2 gap-2 text-base cursor-pointer hover:bg-gray-300 hover:text-light-purple"
+    >
+      <lucide-icon class="w-5 h-5" name="log-out"></lucide-icon>
+      <button (click)="onLogout()">Logout</button>
+    </div>
+  </nav>
+  <div class="grow mr-2">
+    <router-outlet></router-outlet>
+  </div>
+</div>
