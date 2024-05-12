@@ -5,7 +5,7 @@ exports.login = (req, res) => {
   async function findAdminOnDB() {
     try {
       let user = await Admin.findOne({
-        username: req.body.userName,
+        userName: req.body.userName,
         password: req.body.password,
       });
 
